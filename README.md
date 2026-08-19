@@ -185,9 +185,3 @@ No test suite is provided in the current repository. To add tests, consider usin
 ## License
 
 This project includes a LICENSE file — follow the terms stated in `LICENSE` at the repository root.
-
----
-
-If you want, I can:
-- Commit this README.md to the repository for you, or
-- Add a short CONTRIBUTING.md and a Healthcheck / Procfile for deployment (e.g., Gunicorn command).
