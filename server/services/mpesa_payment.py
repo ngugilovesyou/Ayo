@@ -42,7 +42,7 @@ def initiate_stk_push(phone_number, amount, order_id, order_number):
     passkey = os.getenv("MPESA_PASSKEY")
     shortcode = os.getenv("MPESA_SHORTCODE")
     callback_url = os.getenv("MPESA_CALLBACK_URL")
-    partyB = "5624264"
+    partyB = os.getenv("PARTYB")
     
     password = base64.b64encode(f"{shortcode}{passkey}{timestamp}".encode()).decode()
     
@@ -57,7 +57,7 @@ def initiate_stk_push(phone_number, amount, order_id, order_number):
         "TransactionType": "CustomerBuyGoodsOnline",
         "Amount": str(int(amount)),
         "PartyA": phone,
-        "PartyB": "5624264",
+        "PartyB": partyB,
         "PhoneNumber": phone,
         "CallBackURL": f"https://991c-217-199-144-42.ngrok-free.app/api/mpesa/callback?order_id={order_id}",
         "AccountReference": order_number,
